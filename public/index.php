@@ -24,13 +24,12 @@ $app->addRoutingMiddleware();
 $app->add(new BasePathMiddleware($app));
 $app->add(TwigMiddleware::create($app,$twig));
 $app->addErrorMiddleware(true, true, true);
-
 // Define app routes
 $app->get('/',HomeController::class.':index' )->setName('root');
 $app->get('/contacto', ContactoController::class.':index');
 $app->post('/contacto/enviar', ContactoController::class.':enviar');
 $app->get('/blog', Blog::class.':index');
-$app->get('/blog_leer', Blog::class.':leerPost');
+$app->get('/blog/leer/{id}', Blog::class.':leerPost')->setName('blog_leer');
 
 // Run app
 $app->run();

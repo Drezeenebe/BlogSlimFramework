@@ -11,7 +11,6 @@ class MysqlModel
     {
         $consulta = "SELECT * FROM ".static::$tabla." $where ORDER BY 1 DESC";
         return self::execute($consulta);
-
     }
 
     public static function one($id)

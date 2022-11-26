@@ -12,6 +12,7 @@ CREATE TABLE posts(
 
 CREATE TABLE usuarios(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
     EMAIL VARCHAR(100) NOT NULL UNIQUE,
     PASSWORD VARCHAR(40) NOT NULL,
     FECHA_CREACION DATETIME,
@@ -34,6 +35,7 @@ CREATE TABLE comentarios(
 INSERT INTO 
     usuarios
 SET
+    nombre='pablo',
     email='pablo@gmail.com',
     password=sha1('1234'),
     fecha_creacion=NOW();
