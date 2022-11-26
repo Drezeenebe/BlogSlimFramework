@@ -30,6 +30,7 @@ $app->get('/',HomeController::class.':index' )->setName('root');
 $app->get('/contacto', ContactoController::class.':index');
 $app->post('/contacto/enviar', ContactoController::class.':enviar');
 $app->get('/blog', Blog::class.':index');
+$app->get('/blog_leer', Blog::class.':leerPost');
 
 // Run app
 $app->run();
