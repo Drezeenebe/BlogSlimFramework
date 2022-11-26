@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    background: #55869B;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+header nav a.actual{
+    color: white;
+    background: black;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    border: 1px solid;
+}
