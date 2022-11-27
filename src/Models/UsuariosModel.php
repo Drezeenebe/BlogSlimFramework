@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-class UsuariosModels extends MysqlModel{
+class UsuariosModel extends MysqlModel{
     static $tabla = 'usuarios';
 
     public static function create($user){
@@ -11,7 +11,10 @@ class UsuariosModels extends MysqlModel{
         email='{$user['email']}',
         password=sha1('12345678'),
         fecha_creacion=NOW()";
-        self::execute($query);
+        if(self::execute($query)){
+            return self::select("WHERE email='{$user['email']}'");
+        }
+        return 'Error al ingresar';
     }
     
 }

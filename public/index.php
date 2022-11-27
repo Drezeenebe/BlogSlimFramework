@@ -30,6 +30,7 @@ $app->get('/contacto', ContactoController::class.':index');
 $app->post('/contacto/enviar', ContactoController::class.':enviar');
 $app->get('/blog', Blog::class.':index');
 $app->get('/blog/leer/{id}', Blog::class.':leerPost')->setName('blog_leer');
+$app->post('/blog/comment', Blog::class.':setComment');
 
 // Run app
 $app->run();

@@ -11,6 +11,17 @@ class ComentariosModel extends MysqlModel{
         return self::execute($query);
     }
 
+    
+    public static function create($comment){
+        $query = "INSERT INTO comentarios
+        SET 
+        fk_usuario='{$comment['id_usuario']}',
+        fk_post='{$comment['id_post']}',
+        comentario='{$comment['comment']}',
+        fecha_creacion=NOW()";
+        return self::execute($query);
+    }
+
 }
 
 ?>

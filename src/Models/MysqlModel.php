@@ -34,7 +34,6 @@ class MysqlModel
         )) {
             $filas[] = $r;
         }
-
-        return $filas;
+        return (count($filas)!=0) ? $filas : $resultados;
     }
 }
